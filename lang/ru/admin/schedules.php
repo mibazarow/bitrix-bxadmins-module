@@ -1,0 +1,2 @@
+<?php
+$MESS['MIBAZAROW_BXADMINS_SCHEDULES_TITLE'] = 'BX-админ: Задачи';

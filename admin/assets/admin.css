@@ -1,0 +1,2186 @@
+/*
+ * BXADMIN-S — стили административных страниц модуля.
+ * Палитра и типографика повторяют нативную админку Битрикс; без «веб-приложения».
+ */
+
+.bxadmins-settings,
+.bxadmins-manage,
+.bxadmins-summary,
+.bxadmins-chat,
+.bxadmins-lock {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    color: #3c4650;
+}
+
+/* ---------- сводка над вкладками ---------- */
+
+.bxadmins-summary {
+    margin: 0 0 14px;
+    color: #5a6673;
+}
+
+.bxadmins-summary strong {
+    color: #3c4650;
+}
+
+/* ---------- поля форм ---------- */
+
+.adm-detail-content-table .adm-detail-content-cell-l {
+    vertical-align: top;
+}
+
+.adm-detail-content-table .adm-detail-content-cell-l label {
+    display: inline-block;
+    padding-top: 7px;
+}
+
+.bxadmins-input-wide {
+    width: 100%;
+    max-width: 440px;
+}
+
+.bxadmins-input-short {
+    width: 90px;
+}
+
+/* ---------- сетка доменов ---------- */
+
+.bxadmins-domains-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 8px 20px;
+    margin-top: 10px;
+}
+
+.bxadmins-checkbox {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin: 0;
+    color: #3c4650;
+    font-size: 13px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+/* ---------- карточки-сводки ---------- */
+
+.bxadmins-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 10px;
+    margin: 12px 0;
+}
+
+.bxadmins-card {
+    border: 1px solid #dfe3e8;
+    border-radius: 3px;
+    background: #f7f9fa;
+    padding: 10px 12px;
+}
+
+.bxadmins-card-value {
+    font-size: 17px;
+    font-weight: 600;
+    color: #3c4650;
+    line-height: 1.3;
+    word-break: break-word;
+}
+
+.bxadmins-card-value-sm {
+    font-size: 13px;
+}
+
+.bxadmins-card-value-ok {
+    color: #3a9d5d;
+}
+
+.bxadmins-card-value-warn {
+    color: #b58500;
+}
+
+.bxadmins-card-label {
+    margin-top: 4px;
+    color: #5a6673;
+    font-size: 12px;
+    line-height: 1.35;
+}
+
+/* ---------- таблицы ---------- */
+
+.bxadmins-manage .adm-list-table,
+.bxadmins-chat .adm-list-table {
+    margin: 12px 0;
+}
+
+.bxadmins-manage .adm-list-table-header .adm-list-table-cell,
+.bxadmins-chat .adm-list-table-header .adm-list-table-cell {
+    padding: 9px 12px;
+    background: #eef1f4;
+    border-top: 1px solid #dfe3e8;
+    border-bottom: 1px solid #dfe3e8;
+    color: #3c4650;
+    font-size: 12px;
+    text-transform: none;
+}
+
+.bxadmins-manage .adm-list-table-cell,
+.bxadmins-chat .adm-list-table-cell {
+    padding: 8px 12px;
+    line-height: 1.45;
+    vertical-align: top;
+}
+
+.bxadmins-manage .adm-list-table-row:hover .adm-list-table-cell,
+.bxadmins-chat .adm-list-table-row:hover .adm-list-table-cell {
+    background-color: #e8eef2;
+}
+
+.bxadmins-manage code,
+.bxadmins-chat code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 12px;
+    color: #3c4650;
+}
+
+.bxadmins-table-status {
+    font-weight: 600;
+}
+
+.bxadmins-table-status-ok {
+    color: #3a9d5d;
+}
+
+.bxadmins-table-status-miss {
+    color: #d9534f;
+}
+
+/* ---------- прогресс ---------- */
+
+.bxadmins-progress {
+    margin: 12px 0;
+}
+
+.bxadmins-progress-bar {
+    height: 10px;
+    border-radius: 3px;
+    background: #e6eaee;
+    border: 1px solid #dfe3e8;
+    overflow: hidden;
+}
+
+.bxadmins-progress-fill {
+    height: 100%;
+    background: #2f7ed8;
+    transition: width 0.3s ease;
+}
+
+.bxadmins-progress-label {
+    margin-top: 4px;
+    color: #5a6673;
+    font-size: 12px;
+}
+
+.bxadmins-progress-indeterminate {
+    width: 100% !important;
+    background-image: linear-gradient(90deg, #2f7ed8 0%, #9cc5ea 50%, #2f7ed8 100%);
+    background-size: 200% 100%;
+    animation: bxadmins-progress-wave 1.4s linear infinite;
+}
+
+@keyframes bxadmins-progress-wave {
+    from { background-position: 200% 0; }
+    to { background-position: -200% 0; }
+}
+
+/* ---------- кнопки и результаты AJAX ---------- */
+
+.bxadmins-actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 12px 0;
+}
+
+.bxadmins-actions .adm-btn {
+    margin: 0;
+}
+
+.adm-info-message.bxadmins-result-error {
+    background: #faeded;
+    border: 1px solid #e6b8b8;
+    color: #b3312c;
+}
+
+/* ---------- примечания ---------- */
+
+.bxadmins-note {
+    margin-top: 8px;
+    color: #5a6673;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.bxadmins-note-block {
+    margin: 0 0 4px;
+}
+
+/* ---------- журнал ---------- */
+
+.bxadmins-log-level {
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 11px;
+}
+
+.bxadmins-log-level-info {
+    color: #5a6673;
+}
+
+.bxadmins-log-level-warning {
+    color: #b58500;
+}
+
+.bxadmins-log-level-error {
+    color: #d9534f;
+}
+
+.bxadmins-log-message {
+    word-break: break-word;
+}
+
+/* ---------- статусы изменений ---------- */
+
+.bxadmins-change-status {
+    font-weight: 600;
+}
+
+.bxadmins-change-status-pending {
+    color: #b58500;
+}
+
+.bxadmins-change-status-executed {
+    color: #3a9d5d;
+}
+
+.bxadmins-change-status-rejected,
+.bxadmins-change-status-failed {
+    color: #d9534f;
+}
+
+.bxadmins-change-status-rolled_back {
+    color: #5a6673;
+}
+
+.bxadmins-backups code,
+.bxadmins-changes code {
+    word-break: normal;
+    overflow-wrap: break-word;
+}
+
+/* Имена инструментов, даты и файлы дампов не рвём посередине: колонка расширяется. */
+.bxadmins-changes .adm-list-table-cell:nth-child(1),
+.bxadmins-changes .adm-list-table-cell:nth-child(2),
+.bxadmins-changes .adm-list-table-cell:nth-child(5) {
+    white-space: nowrap;
+}
+
+/* ---------- карточки изменений в чате ---------- */
+
+.bxadmins-chat .bxadmins-change-card {
+    max-width: 100%;
+    margin: 12px 0 0;
+    padding: 10px 12px;
+    border: 1px solid #e6eaee;
+    border-left: 4px solid #cfd6dd;
+    border-radius: 5px;
+    background: #f8fafc;
+    line-height: 1.5;
+    white-space: normal;
+}
+
+.bxadmins-chat .bxadmins-change-card-pending {
+    border-left-color: #e0a800;
+}
+
+.bxadmins-chat .bxadmins-change-card-executed {
+    border-left-color: #3a9d5d;
+}
+
+.bxadmins-chat .bxadmins-change-card-rejected,
+.bxadmins-chat .bxadmins-change-card-failed {
+    border-left-color: #d9534f;
+}
+
+.bxadmins-chat .bxadmins-change-card-rolled_back {
+    border-left-color: #5a6673;
+}
+
+.bxadmins-chat .bxadmins-change-title {
+    margin-bottom: 6px;
+    font-weight: 600;
+    font-size: 13px;
+    color: #3c4650;
+}
+
+.bxadmins-chat .bxadmins-change-summary {
+    margin-bottom: 8px;
+    font-size: 13px;
+    color: #3c4650;
+}
+
+.bxadmins-chat .bxadmins-change-preview,
+.bxadmins-chat .bxadmins-change-result {
+    max-height: 260px;
+    margin: 0 0 8px;
+    padding: 8px 10px;
+    overflow: auto;
+    border: 1px solid #e6eaee;
+    border-radius: 4px;
+    background: #f7f9fa;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 12px;
+    line-height: 1.45;
+    color: #3c4650;
+    white-space: pre-wrap;
+    word-break: break-word;
+}
+
+.bxadmins-chat .bxadmins-change-preview {
+    max-height: 320px;
+    /* Markdown-план: обычный шрифт, а не моноширинный от общего правила выше. */
+    font-family: inherit;
+    font-size: 13px;
+    line-height: 1.5;
+    white-space: normal;
+}
+
+.bxadmins-chat .bxadmins-change-preview code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 12px;
+}
+
+.bxadmins-chat .bxadmins-change-meta {
+    margin-bottom: 10px;
+    color: #5a6673;
+    font-size: 12px;
+}
+
+.bxadmins-chat .bxadmins-change-busy {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+    padding: 8px 10px;
+    border-radius: 6px;
+    background: #fff8e1;
+    color: #6b5300;
+    font-size: 12px;
+}
+
+.bxadmins-msg-shot {
+    display: block;
+    max-width: 100%;
+    /* Длинные страницы не должны растягивать чат: показываем верх снимка. */
+    max-height: 420px;
+    object-fit: cover;
+    object-position: top center;
+    margin: 8px 0 4px;
+    border: 1px solid #dfe3e8;
+    border-radius: 4px;
+    cursor: zoom-in;
+}
+
+.bxadmins-chat .bxadmins-change-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.bxadmins-chat .bxadmins-change-details {
+    margin-top: 10px;
+    color: #5a6673;
+    font-size: 12px;
+}
+
+.bxadmins-chat .bxadmins-change-details summary {
+    cursor: pointer;
+}
+
+/* ---------- спиннер ---------- */
+
+.bxadmins-spinner {
+    width: 38px;
+    height: 38px;
+    margin: 0 auto;
+    border: 4px solid #e6eaee;
+    border-top-color: #2f7ed8;
+    border-radius: 50%;
+    animation: bxadmins-spin 1s linear infinite;
+}
+
+.bxadmins-spinner-sm {
+    width: 14px;
+    height: 14px;
+    margin: 0;
+    flex: 0 0 auto;
+    border-width: 2px;
+}
+
+@keyframes bxadmins-spin {
+    to { transform: rotate(360deg); }
+}
+
+/* ---------- экран онбординга (замок) ---------- */
+
+.bxadmins-lock {
+    padding: 32px 0;
+}
+
+.bxadmins-lock-card {
+    max-width: 620px;
+    margin: 24px auto;
+    padding: 36px 32px;
+    border: 1px solid #dfe3e8;
+    border-radius: 8px;
+    background: #fff;
+    text-align: center;
+    line-height: 1.5;
+}
+
+.bxadmins-lock-eyebrow {
+    margin-bottom: 18px;
+    color: #8f98a3;
+    font-size: 11px;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+
+.bxadmins-lock-title {
+    margin: 18px 0 10px;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.35;
+    color: #3c4650;
+}
+
+.bxadmins-lock-text {
+    margin: 0 0 8px;
+    color: #3c4650;
+    font-size: 13.5px;
+    line-height: 1.6;
+}
+
+.bxadmins-lock-note {
+    margin: 6px 0 0;
+    color: #5a6673;
+    font-size: 12.5px;
+    line-height: 1.55;
+}
+
+.bxadmins-lock .bxadmins-progress {
+    max-width: 420px;
+    margin: 20px auto;
+}
+
+/* ---------- чат: каркас ---------- */
+
+.bxadmins-chat {
+    display: block;
+    line-height: 1.5;
+}
+
+.bxadmins-chat-panel {
+    display: flex;
+    align-items: stretch;
+    border: 1px solid #dfe3e8;
+    border-radius: 6px;
+    background: #fff;
+    overflow: hidden;
+    min-height: 480px;
+}
+
+.bxadmins-chat-sidebar {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 260px;
+    box-sizing: border-box;
+    padding: 12px;
+    border-right: 1px solid #dfe3e8;
+    background: #f7f9fa;
+    min-width: 0;
+}
+
+.bxadmins-new-chat {
+    width: 100%;
+    margin: 0 0 12px;
+}
+
+.bxadmins-chat-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    flex: 1 1 auto;
+    overflow-y: auto;
+}
+
+.bxadmins-chat-sidebar .bxadmins-chat-list-empty {
+    padding: 12px 4px;
+    font-size: 12px;
+}
+
+.bxadmins-chat-list-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    margin-bottom: 4px;
+    padding: 8px 10px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    background: #fff;
+    cursor: pointer;
+}
+
+.bxadmins-chat-list-actions {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    display: none;
+    gap: 2px;
+    padding: 2px;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.94);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+}
+
+.bxadmins-chat-list-item:hover .bxadmins-chat-list-actions,
+.bxadmins-chat-list-item:focus-within .bxadmins-chat-list-actions {
+    display: flex;
+}
+
+.bxadmins-chat-action {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 22px;
+    height: 22px;
+    padding: 0;
+    border: 0;
+    border-radius: 3px;
+    background: transparent;
+    color: #6b7684;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.bxadmins-chat-action svg {
+    display: block;
+}
+
+.bxadmins-chat-action:hover {
+    background: #e2e8ef;
+    color: #2f6bad;
+}
+
+.bxadmins-chat-action[data-action="delete"]:hover {
+    background: #fbe3e3;
+    color: #c0392b;
+}
+
+.bxadmins-chat-list-item.bxadmins-pinned .bxadmins-chat-list-title::before {
+    content: '★ ';
+    color: #e0a800;
+}
+
+.bxadmins-chat-list-item:hover {
+    border-color: #dfe3e8;
+    background: #eef1f4;
+}
+
+.bxadmins-chat-list-item.bxadmins-active {
+    border-color: #cfe0f2;
+    background: #e8f1fb;
+}
+
+.bxadmins-chat-list-title {
+    font-size: 13px;
+    line-height: 1.4;
+    color: #3c4650;
+    word-break: break-word;
+}
+
+.bxadmins-chat-list-date {
+    font-size: 11px;
+    color: #8f98a3;
+}
+
+.bxadmins-chat-list-item.bxadmins-active .bxadmins-chat-list-title {
+    font-weight: 600;
+    color: #2f6bad;
+}
+
+.bxadmins-chat-main {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    min-width: 0;
+    background: #fff;
+}
+
+/* ---------- чат: сообщения ---------- */
+
+.bxadmins-chat-messages {
+    flex: 1 1 auto;
+    box-sizing: border-box;
+    min-height: 420px;
+    max-height: 60vh;
+    overflow-y: auto;
+    padding: 16px;
+}
+
+.bxadmins-msg {
+    display: flex;
+    gap: 10px;
+    max-width: 100%;
+    margin-bottom: 14px;
+}
+
+.bxadmins-msg-avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 32px;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #eef1f4;
+    color: #5a6673;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.bxadmins-msg-content {
+    min-width: 0;
+    max-width: 78%;
+}
+
+.bxadmins-msg-meta {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    margin-bottom: 3px;
+}
+
+.bxadmins-msg-role {
+    font-size: 11px;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    color: #5a6673;
+}
+
+.bxadmins-msg-time {
+    font-size: 11px;
+    color: #8f98a3;
+}
+
+.bxadmins-msg-body {
+    padding: 9px 12px;
+    border: 1px solid #dfe3e8;
+    border-radius: 6px;
+    background: #fff;
+    font-size: 13.5px;
+    line-height: 1.5;
+    white-space: pre-wrap;
+    word-break: break-word;
+}
+
+.bxadmins-msg-assistant .bxadmins-msg-body {
+    background: #fff;
+}
+
+/* ---------- Markdown в ответах агента ---------- */
+
+/* Сгенерированная разметка не должна наследовать pre-wrap обычного текста. */
+.bxadmins-msg-body.bxadmins-md {
+    white-space: normal;
+}
+
+.bxadmins-md > *:first-child {
+    margin-top: 0;
+}
+
+.bxadmins-md > *:last-child {
+    margin-bottom: 0;
+}
+
+.bxadmins-md p {
+    margin: 0 0 8px;
+}
+
+.bxadmins-md h1,
+.bxadmins-md h2,
+.bxadmins-md h3,
+.bxadmins-md h4,
+.bxadmins-md h5,
+.bxadmins-md h6 {
+    margin: 12px 0 6px;
+    font-weight: 600;
+    line-height: 1.3;
+    color: #2f3b46;
+}
+
+.bxadmins-md h1 {
+    font-size: 18px;
+}
+
+.bxadmins-md h2 {
+    font-size: 16px;
+}
+
+.bxadmins-md h3 {
+    font-size: 15px;
+}
+
+.bxadmins-md h4,
+.bxadmins-md h5,
+.bxadmins-md h6 {
+    font-size: 13.5px;
+}
+
+.bxadmins-md ul,
+.bxadmins-md ol {
+    margin: 0 0 8px;
+    padding-left: 22px;
+}
+
+.bxadmins-md li {
+    margin: 2px 0;
+}
+
+.bxadmins-md li > ul,
+.bxadmins-md li > ol {
+    margin: 2px 0;
+}
+
+.bxadmins-md code {
+    padding: 1px 4px;
+    border-radius: 3px;
+    background: #f1f3f5;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 12.5px;
+    color: #2f3b46;
+}
+
+.bxadmins-md pre {
+    margin: 0;
+    padding: 10px 12px;
+    overflow-x: auto;
+    background: #1f2430;
+    color: #e6e9ef;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 12.5px;
+    line-height: 1.5;
+}
+
+.bxadmins-md pre code {
+    padding: 0;
+    background: transparent;
+    color: inherit;
+    font-size: inherit;
+}
+
+.bxadmins-md blockquote {
+    margin: 8px 0;
+    padding: 6px 12px;
+    border-left: 3px solid #cfd8e3;
+    background: #f7f9fb;
+    color: #5a6673;
+}
+
+.bxadmins-md table {
+    margin: 8px 0;
+    border-collapse: collapse;
+    font-size: 12.5px;
+}
+
+.bxadmins-md th,
+.bxadmins-md td {
+    padding: 4px 8px;
+    border: 1px solid #dfe3e8;
+    text-align: left;
+    vertical-align: top;
+}
+
+.bxadmins-md th {
+    background: #f4f6f8;
+    font-weight: 600;
+}
+
+.bxadmins-md a {
+    color: #2067b0;
+}
+
+.bxadmins-md hr {
+    margin: 10px 0;
+    border: 0;
+    border-top: 1px solid #e3e7ec;
+}
+
+.bxadmins-md del {
+    color: #8a949f;
+}
+
+/* Блок кода с шапкой и копированием */
+.bxadmins-code {
+    margin: 8px 0;
+    border: 1px solid #d7dde4;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.bxadmins-code-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    padding: 3px 10px;
+    background: #eef1f5;
+    font-size: 11.5px;
+    color: #5a6673;
+}
+
+.bxadmins-code-lang {
+    text-transform: lowercase;
+}
+
+.bxadmins-code-copy {
+    padding: 2px 6px;
+    border: 0;
+    border-radius: 3px;
+    background: transparent;
+    color: #3c4650;
+    font-size: 11.5px;
+    cursor: pointer;
+}
+
+.bxadmins-code-copy:hover {
+    background: #dde3ea;
+}
+
+.bxadmins-msg-user {
+    flex-direction: row-reverse;
+}
+
+.bxadmins-msg-user .bxadmins-msg-meta {
+    justify-content: flex-end;
+}
+
+.bxadmins-msg-user .bxadmins-msg-avatar {
+    background: #dfe9f5;
+    color: #2f6bad;
+}
+
+.bxadmins-msg-user .bxadmins-msg-body {
+    border-color: #d3e3f5;
+    background: #e8f1fb;
+    color: #2b3d4f;
+}
+
+.bxadmins-msg-error .bxadmins-msg-avatar {
+    background: #faeded;
+    color: #b3312c;
+}
+
+.bxadmins-msg-error .bxadmins-msg-body {
+    border-color: #e6b8b8;
+    background: #faeded;
+    color: #b3312c;
+}
+
+.bxadmins-msg-error .bxadmins-msg-role {
+    color: #b3312c;
+}
+
+.bxadmins-msg-tool {
+    display: block;
+    max-width: 100%;
+    margin-bottom: 10px;
+    padding: 8px 10px;
+    border: 1px solid #e6eaee;
+    border-left: 3px solid #cfd6dd;
+    border-radius: 4px;
+    background: #f7f9fa;
+    color: #5a6673;
+    font-size: 12px;
+}
+
+.bxadmins-msg-tool summary {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    cursor: pointer;
+    color: #5a6673;
+}
+
+.bxadmins-msg-tool-name {
+    font-weight: 600;
+}
+
+.bxadmins-msg-tool-label {
+    margin-top: 6px;
+    font-size: 11px;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    color: #8f98a3;
+}
+
+.bxadmins-msg-tool-body {
+    margin-top: 3px;
+    padding: 6px 8px;
+    border: 1px solid #e6eaee;
+    border-radius: 3px;
+    background: #fff;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 12px;
+    line-height: 1.45;
+    color: #3c4650;
+    white-space: pre-wrap;
+    word-break: break-word;
+}
+
+/* ---------- чат: пустые состояния и подсказки ---------- */
+
+.bxadmins-empty {
+    color: #8f98a3;
+    padding: 24px 8px;
+    text-align: center;
+}
+
+.bxadmins-chat-empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 16px;
+}
+
+.bxadmins-empty-mark {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    margin-bottom: 14px;
+    border: 1px solid #cfe0f2;
+    border-radius: 8px;
+    background: #eef4fb;
+    color: #2f7ed8;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.bxadmins-empty-title {
+    margin-bottom: 6px;
+    font-size: 17px;
+    font-weight: 600;
+    color: #3c4650;
+}
+
+.bxadmins-empty-text {
+    max-width: 440px;
+    margin-bottom: 16px;
+    color: #5a6673;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.bxadmins-suggestions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+}
+
+.bxadmins-suggestion {
+    padding: 6px 12px;
+    border: 1px solid #dfe3e8;
+    border-radius: 14px;
+    background: #f7f9fa;
+    color: #3c4650;
+    font-family: inherit;
+    font-size: 12.5px;
+    cursor: pointer;
+}
+
+.bxadmins-suggestion:hover {
+    border-color: #2f7ed8;
+    background: #eef4fb;
+    color: #2f7ed8;
+}
+
+.bxadmins-suggestion:focus-visible,
+.bxadmins-chat-list-item:focus-visible {
+    outline: 2px solid #2f7ed8;
+    outline-offset: 1px;
+}
+
+/* ---------- чат: индикатор ожидания ---------- */
+
+.bxadmins-chat-progress {
+    padding: 0;
+    border-top: 1px solid #eef1f4;
+    background: #fbfcfd;
+}
+
+.bxadmins-steps-summary {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    color: #3c4650;
+    font-size: 12.5px;
+    cursor: pointer;
+    list-style: none;
+}
+
+.bxadmins-steps-summary::-webkit-details-marker {
+    display: none;
+}
+
+.bxadmins-steps-summary::after {
+    content: "▾";
+    margin-left: auto;
+    color: #8f98a3;
+    font-size: 11px;
+    transition: transform .15s ease;
+}
+
+.bxadmins-steps[open] .bxadmins-steps-summary::after {
+    transform: rotate(180deg);
+}
+
+.bxadmins-steps-current {
+    min-width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.bxadmins-steps-more {
+    color: #8f98a3;
+    font-size: 11.5px;
+}
+
+.bxadmins-steps-list {
+    margin: 0;
+    padding: 0 16px 10px 34px;
+    list-style: none;
+    color: #5a6673;
+    font-size: 12px;
+}
+
+.bxadmins-step {
+    position: relative;
+    padding: 3px 0;
+}
+
+.bxadmins-step::before {
+    content: "";
+    position: absolute;
+    left: -16px;
+    top: 9px;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #cfd6dd;
+}
+
+.bxadmins-step-active::before {
+    background: #2f7ed8;
+}
+
+.bxadmins-step-done::before {
+    background: #3fa45b;
+}
+
+.bxadmins-step-error::before {
+    background: #d34b4b;
+}
+
+.bxadmins-step-time {
+    margin-left: 8px;
+    color: #8f98a3;
+    font-size: 11px;
+}
+
+.bxadmins-step-detail {
+    margin-top: 4px;
+    padding: 6px 8px;
+    max-height: 160px;
+    overflow: auto;
+    border: 1px solid #eef1f4;
+    border-radius: 4px;
+    background: #fff;
+    color: #5a6673;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 11px;
+    line-height: 1.45;
+    white-space: pre-wrap;
+    word-break: break-word;
+}
+
+/* Сообщение, которое ждёт своей очереди: видно, что оно ещё не в работе. */
+.bxadmins-msg-queued .bxadmins-msg-body {
+    color: #6b7480;
+    background: #f3f5f7;
+    border-style: dashed;
+}
+
+.bxadmins-queued-bar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 6px;
+    color: #8f98a3;
+    font-size: 11.5px;
+}
+
+.bxadmins-queued-remove {
+    padding: 0 4px;
+    border: 0;
+    background: none;
+    color: #8f98a3;
+    font-size: 14px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.bxadmins-queued-remove:hover {
+    color: #d34b4b;
+}
+
+/* ---------- чат: поле ввода ---------- */
+
+.bxadmins-chat-composer {
+    box-sizing: border-box;
+    margin-top: auto;
+    padding: 12px 16px;
+    border-top: 1px solid #dfe3e8;
+    background: #fff;
+}
+
+.bxadmins-chat-composer textarea {
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    padding: 9px 11px;
+    border: 1px solid #cfd6dd;
+    border-radius: 4px;
+    background: #fff;
+    font-family: inherit;
+    font-size: 13px;
+    line-height: 1.5;
+    color: #3c4650;
+    resize: vertical;
+}
+
+.bxadmins-chat-composer textarea:focus {
+    outline: none;
+    border-color: #2f7ed8;
+    box-shadow: 0 0 0 3px rgba(47, 126, 216, .15);
+}
+
+.bxadmins-chat-composer textarea:disabled {
+    border-color: #dfe3e8;
+    background: #f2f4f6;
+    color: #8f98a3;
+}
+
+.bxadmins-composer-actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.bxadmins-composer-actions .adm-btn {
+    margin: 0;
+}
+
+.bxadmins-send:disabled {
+    opacity: .6;
+    cursor: default;
+}
+
+/* ---------- чат: переключатель bypass ---------- */
+
+.bxadmins-bypass {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 5px 12px 5px 8px;
+    border: 1px solid #dfe3e8;
+    border-radius: 14px;
+    background: #f7f9fa;
+    color: #5a6673;
+    font-size: 12.5px;
+    cursor: pointer;
+}
+
+.bxadmins-bypass:hover {
+    border-color: #cfd6dd;
+}
+
+.bxadmins-bypass-input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: 0;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.bxadmins-bypass-switch {
+    position: relative;
+    flex: 0 0 auto;
+    width: 34px;
+    height: 18px;
+    border-radius: 9px;
+    background: #cfd6dd;
+    transition: background .15s ease;
+}
+
+.bxadmins-bypass-switch::after {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: #fff;
+    transition: transform .15s ease;
+}
+
+.bxadmins-bypass-input:focus-visible + .bxadmins-bypass-switch {
+    outline: 2px solid #2f7ed8;
+    outline-offset: 2px;
+}
+
+.bxadmins-bypass-on {
+    border-color: #e6b8b8;
+    background: #faeded;
+    color: #b3312c;
+    font-weight: 600;
+}
+
+.bxadmins-bypass-on .bxadmins-bypass-switch {
+    background: #d9534f;
+}
+
+.bxadmins-bypass-on .bxadmins-bypass-switch::after {
+    transform: translateX(16px);
+}
+
+.bxadmins-bypass-warn {
+    margin-top: 10px;
+    padding: 7px 10px;
+    border: 1px solid #e6b8b8;
+    border-left: 3px solid #d9534f;
+    border-radius: 4px;
+    background: #faeded;
+    color: #b3312c;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+/* ---------- чат: адаптив ---------- */
+
+@media (max-width: 900px) {
+    .bxadmins-chat-panel {
+        flex-direction: column;
+    }
+
+    .bxadmins-chat-sidebar {
+        flex: 0 0 auto;
+        border-right: 0;
+        border-bottom: 1px solid #dfe3e8;
+    }
+
+    .bxadmins-chat-list {
+        max-height: 200px;
+    }
+
+    .bxadmins-chat-messages {
+        max-height: 55vh;
+    }
+
+    .bxadmins-msg-content {
+        max-width: 88%;
+    }
+}
+
+/* ---------- подключение модели: экран после индексации ---------- */
+
+.bxadmins-setup-card {
+    max-width: 680px;
+    text-align: left;
+}
+
+.bxadmins-setup-card .bxadmins-lock-eyebrow,
+.bxadmins-setup-card .bxadmins-lock-title {
+    text-align: center;
+}
+
+.bxadmins-setup-card .bxadmins-lock-text {
+    text-align: center;
+}
+
+.bxadmins-setup-options {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin: 22px 0 4px;
+}
+
+.bxadmins-setup-option {
+    padding: 12px 14px;
+    border: 1px solid #dfe3e8;
+    border-radius: 6px;
+    background: #f7f9fa;
+}
+
+.bxadmins-setup-option-title {
+    margin-bottom: 2px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #3c4650;
+}
+
+.bxadmins-setup-option-text {
+    color: #5a6673;
+    font-size: 12.5px;
+    line-height: 1.55;
+    word-break: break-word;
+}
+
+.bxadmins-setup-actions {
+    margin: 22px 0 6px;
+    text-align: center;
+}
+
+/* ---------- подсказки в настройках ---------- */
+
+.bxadmins-hints {
+    padding: 12px 14px;
+    border: 1px solid #dfe3e8;
+    border-left: 3px solid #2f7ed8;
+    border-radius: 4px;
+    background: #f7f9fa;
+    color: #3c4650;
+    font-size: 12.5px;
+    line-height: 1.6;
+}
+
+.bxadmins-hints-title {
+    margin-bottom: 6px;
+    font-weight: 600;
+}
+
+.bxadmins-hints ul {
+    margin: 0;
+    padding-left: 18px;
+}
+
+.bxadmins-hints li {
+    margin: 0 0 3px;
+}
+
+.bxadmins-hints code {
+    padding: 1px 4px;
+    border-radius: 3px;
+    background: #e9edf1;
+    font-size: 12px;
+}
+
+.bxadmins-model-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.bxadmins-note-inline {
+    margin-left: 6px;
+    color: #5a6673;
+    font-size: 12.5px;
+}
+
+.bxadmins-chat-notice {
+    align-self: center;
+    margin: 6px 0;
+    padding: 4px 10px;
+    border-radius: 10px;
+    background: #eef1f4;
+    color: #6b7684;
+    font-size: 11.5px;
+}
+
+.bxadmins-msg-streaming .bxadmins-msg-body::after {
+    content: '▍';
+    margin-left: 1px;
+    color: #2f6bad;
+    animation: bxadmins-caret 1s steps(2) infinite;
+}
+
+@keyframes bxadmins-caret {
+    50% { opacity: 0; }
+}
+
+/* ---------- подключения к провайдерам ---------- */
+
+.bxadmins-profiles-table {
+    width: 100%;
+    margin: 10px 0 4px;
+    border-collapse: collapse;
+    font-size: 12.5px;
+}
+
+.bxadmins-profiles-table th {
+    padding: 6px 8px;
+    border-bottom: 1px solid #dfe3e8;
+    color: #5a6673;
+    font-weight: 600;
+    text-align: left;
+}
+
+.bxadmins-profiles-table td {
+    padding: 6px 8px;
+    border-bottom: 1px solid #eef1f4;
+    vertical-align: middle;
+}
+
+.bxadmins-profile-row.bxadmins-profile-active td {
+    background: #f2f8ff;
+}
+
+.bxadmins-profile-endpoint {
+    max-width: 320px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #5a6673;
+}
+
+.bxadmins-profile-actions {
+    white-space: nowrap;
+    text-align: right;
+}
+
+.bxadmins-profile-actions .adm-btn {
+    margin-left: 4px;
+}
+
+.bxadmins-profile-form {
+    margin-top: 16px;
+    padding-top: 12px;
+    border-top: 1px solid #dfe3e8;
+}
+
+.bxadmins-profile-fields {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.bxadmins-profile-fields td {
+    padding: 5px 8px;
+    vertical-align: top;
+}
+
+.bxadmins-profile-status {
+    margin-left: 10px;
+    font-size: 12.5px;
+}
+
+.bxadmins-empty-inline {
+    margin: 10px 0;
+    color: #6b7684;
+    font-size: 12.5px;
+}
+
+/* карточка «провайдер недоступен» в чате */
+.bxadmins-provider-down {
+    margin: 10px 0;
+    padding: 12px 14px;
+    border: 1px solid #f0c9c9;
+    border-left: 3px solid #c0392b;
+    border-radius: 6px;
+    background: #fdf4f4;
+}
+
+.bxadmins-provider-down-title {
+    margin-bottom: 4px;
+    font-weight: 600;
+    color: #8c2f22;
+}
+
+.bxadmins-provider-down-text {
+    color: #5a4a4a;
+    font-size: 12.5px;
+    line-height: 1.55;
+}
+
+.bxadmins-provider-down-hint {
+    margin-top: 6px;
+    color: #6b7684;
+    font-size: 12px;
+}
+
+.bxadmins-provider-down-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 10px;
+}
+
+/* ---------- MCP-серверы ---------- */
+
+.bxadmins-mcp {
+    margin-top: 8px;
+}
+
+/* ---------- скиллы ---------- */
+
+.bxadmins-skills {
+    margin-top: 8px;
+}
+
+.bxadmins-skill-disabled td {
+    color: #8a94a0;
+}
+
+.bxadmins-skill-desc {
+    max-width: 320px;
+    color: #5a6673;
+}
+
+.bxadmins-skill-instructions {
+    margin-top: 4px;
+    font-size: 12px;
+}
+
+.bxadmins-skill-instructions summary {
+    color: #2067b0;
+    cursor: pointer;
+}
+
+.bxadmins-skill-instructions div {
+    margin-top: 6px;
+    max-width: 640px;
+    color: #5a6673;
+    white-space: pre-wrap;
+}
+
+.bxadmins-skill-toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.bxadmins-skill-filter {
+    min-width: 280px;
+}
+
+.bxadmins-skill-import-label {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.bxadmins-skill-badge {
+    display: inline-block;
+    margin-left: 6px;
+    padding: 1px 6px;
+    border-radius: 8px;
+    background: #eef1f4;
+    color: #5a6673;
+    font-size: 11px;
+    font-weight: normal;
+}
+
+.bxadmins-skill-meta {
+    margin-top: 3px;
+    color: #6b7683;
+    font-size: 12px;
+}
+
+.bxadmins-skill-stats {
+    color: #5a6673;
+    font-size: 12px;
+    line-height: 1.5;
+    white-space: nowrap;
+}
+
+.bxadmins-skill-deleted td {
+    opacity: .55;
+}
+
+.bxadmins-skill-editor > td {
+    background: #f7f9fa;
+}
+
+.bxadmins-skill-form-grid {
+    width: 100%;
+}
+
+.bxadmins-skill-form-grid td {
+    padding: 4px 8px 4px 0;
+    vertical-align: middle;
+}
+
+.bxadmins-skill-instructions-input {
+    width: 100%;
+    box-sizing: border-box;
+    font-family: Menlo, Consolas, monospace;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.bxadmins-skill-history-list {
+    margin-top: 10px;
+    font-size: 12px;
+}
+
+.bxadmins-skill-history-row {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    padding: 4px 0;
+    border-top: 1px solid #e3e7eb;
+}
+
+/* ---------- MCP tools ---------- */
+
+.bxadmins-mcp-tools summary {
+    color: #2067b0;
+    cursor: pointer;
+}
+
+.bxadmins-mcp-tool {
+    margin: 4px 0 0 12px;
+    font-size: 12px;
+    color: #5a6673;
+}
+
+.bxadmins-mcp-tool code {
+    color: #1f2a36;
+}
+
+.bxadmins-mcp-status-error {
+    color: #c0392b;
+    font-size: 12px;
+}
+
+
+.bxadmins-card-value-warn {
+    color: #c0392b;
+}
+
+/* ---------- Задачи по расписанию ---------- */
+
+/*
+ * Атрибут hidden должен скрывать всегда. У .adm-info-message и других блоков
+ * админки свой display, который перебивает браузерное правило — восстанавливаем
+ * поведение из спецификации для всех наших страниц разом.
+ */
+[hidden],
+.bxadmins-hidden {
+    display: none !important;
+}
+
+.bxadmins-sched-intro {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 14px;
+    padding: 14px 16px;
+    border: 1px solid #d6e2ef;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #f5f9ff 0%, #eef4fb 100%);
+}
+
+.bxadmins-sched-intro-icon {
+    flex: 0 0 38px;
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #2f6bad;
+    color: #fff;
+    font-size: 18px;
+}
+
+.bxadmins-sched-intro-body {
+    flex: 1 1 auto;
+    min-width: 0;
+}
+
+.bxadmins-sched-intro-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: #23303c;
+}
+
+.bxadmins-sched-intro-text {
+    margin-top: 3px;
+    font-size: 12.5px;
+    line-height: 1.45;
+    color: #5c6873;
+}
+
+/* Кнопка не должна переноситься: в узкой строке «Открыть чат» ломалось на две строки. */
+.bxadmins-sched-intro .adm-btn {
+    flex: 0 0 auto;
+    white-space: nowrap;
+}
+
+.bxadmins-sched-list {
+    display: grid;
+    gap: 10px;
+}
+
+.bxadmins-sched {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 14px 16px;
+    border: 1px solid #e2e7ee;
+    border-radius: 10px;
+    background: #fff;
+    transition: border-color .15s ease, box-shadow .15s ease;
+}
+
+.bxadmins-sched:hover {
+    border-color: #c9d6e5;
+    box-shadow: 0 2px 8px rgba(38, 60, 88, .06);
+}
+
+.bxadmins-sched-off {
+    background: #fafbfc;
+    border-style: dashed;
+}
+
+.bxadmins-sched-off .bxadmins-sched-title {
+    color: #8b95a0;
+}
+
+.bxadmins-sched-main {
+    flex: 1 1 auto;
+    min-width: 0;
+}
+
+.bxadmins-sched-head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 8px;
+}
+
+.bxadmins-sched-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: #22303c;
+}
+
+.bxadmins-sched-badge {
+    padding: 1px 8px;
+    border-radius: 10px;
+    background: #eaf1f9;
+    color: #2f6bad;
+    font-size: 11.5px;
+    white-space: nowrap;
+}
+
+.bxadmins-sched-desc {
+    margin-top: 5px;
+    font-size: 12.5px;
+    line-height: 1.5;
+    color: #4d5965;
+    overflow-wrap: anywhere;
+}
+
+.bxadmins-sched-meta {
+    margin-top: 8px;
+    font-size: 11.5px;
+    color: #8a949f;
+}
+
+.bxadmins-sched-meta b {
+    color: #4d5965;
+    font-weight: 600;
+}
+
+.bxadmins-sched-when {
+    color: #a8b0b9;
+}
+
+.bxadmins-sched-status-done { color: #1f8a70; }
+.bxadmins-sched-status-queued { color: #2f6bad; }
+.bxadmins-sched-status-failed { color: #b3312c; }
+
+.bxadmins-sched-actions {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding-top: 2px;
+}
+
+/* Переключатель включения: кнопка, чтобы админка не подменяла её своей галкой */
+.bxadmins-switch {
+    display: inline-flex;
+    align-items: center;
+    padding: 0;
+    border: 0;
+    background: none;
+    cursor: pointer;
+}
+
+.bxadmins-switch-track {
+    position: relative;
+    display: inline-block;
+    width: 38px;
+    height: 20px;
+    border-radius: 10px;
+    background: #cfd6de;
+    transition: background .15s ease;
+}
+
+.bxadmins-switch-knob {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
+    transition: transform .15s ease;
+}
+
+.bxadmins-switch-on .bxadmins-switch-track {
+    background: #1f8a70;
+}
+
+.bxadmins-switch-on .bxadmins-switch-knob {
+    transform: translateX(18px);
+}
+
+.bxadmins-switch:focus-visible .bxadmins-switch-track {
+    outline: 2px solid #7ba7d9;
+    outline-offset: 2px;
+}
+
+@media (max-width: 780px) {
+    .bxadmins-sched {
+        flex-direction: column;
+    }
+
+    .bxadmins-sched-actions {
+        align-self: flex-end;
+    }
+}
+
+/* ---------- Журнал ---------- */
+
+.bxadmins-log-date {
+    width: 150px;
+    white-space: nowrap;
+    color: #8a949f;
+    font-size: 11.5px;
+}
+
+.bxadmins-log-level {
+    width: 90px;
+}
+
+.bxadmins-log-badge {
+    display: inline-block;
+    padding: 1px 7px;
+    border-radius: 9px;
+    font-size: 11px;
+    background: #eef1f5;
+    color: #5a6673;
+}
+
+.bxadmins-log-error {
+    background: #fdeceb;
+    color: #b3312c;
+}
+
+.bxadmins-log-message {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 11.5px;
+    overflow-wrap: anywhere;
+}
+
+/* ---------- Индикаторы в списке чатов ---------- */
+
+.bxadmins-chat-list-item {
+    position: relative;
+}
+
+.bxadmins-chat-list-spinner {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin-right: 5px;
+    border: 2px solid #cfd8e3;
+    border-top-color: #2f6bad;
+    border-radius: 50%;
+    vertical-align: middle;
+    animation: bxadmins-spin .8s linear infinite;
+}
+
+.bxadmins-chat-list-queued {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    margin-right: 5px;
+    border-radius: 50%;
+    background: #d8b24a;
+    vertical-align: middle;
+}
+
+.bxadmins-chat-list-schedule {
+    margin-right: 4px;
+    color: #8a949f;
+    font-size: 11px;
+    vertical-align: middle;
+}
+
+.bxadmins-chat-list-item.bxadmins-busy .bxadmins-chat-list-title {
+    color: #2f6bad;
+}
+
+@keyframes bxadmins-spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* ---------- файлы в чате ---------- */
+
+.bxadmins-attach {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 8px;
+}
+
+.bxadmins-attach-list {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.bxadmins-attach-chip {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    max-width: 260px;
+    padding: 4px 8px;
+    border: 1px solid #dfe3e8;
+    border-radius: 5px;
+    background: #f7f9fa;
+    font-size: 12px;
+    color: #3c4650;
+}
+
+.bxadmins-attach-chip img {
+    width: 28px;
+    height: 28px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.bxadmins-attach-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 4px;
+    background: #e8edf2;
+    color: #5a6673;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: .04em;
+}
+
+.bxadmins-attach-name {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.bxadmins-attach-remove {
+    padding: 0 2px;
+    border: 0;
+    background: none;
+    color: #8f98a3;
+    font-size: 15px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.bxadmins-attach-remove:hover {
+    color: #d34b4b;
+}
+
+.bxadmins-attach-loading {
+    border-style: dashed;
+    color: #8f98a3;
+}
+
+.bxadmins-composer-drop {
+    outline: 2px dashed #2f7ed8;
+    outline-offset: -4px;
+}
+
+.bxadmins-msg-files {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-top: 8px;
+}
+
+.bxadmins-file {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 8px;
+    border: 1px solid #e6eaee;
+    border-radius: 5px;
+    background: #fafbfc;
+    color: #3c4650;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+.bxadmins-file:hover {
+    border-color: #c9d5e2;
+}
+
+.bxadmins-file img {
+    max-width: 240px;
+    max-height: 170px;
+    border-radius: 4px;
+}
+
+.bxadmins-file-name {
+    max-width: 240px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.bxadmins-file-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 26px;
+    height: 26px;
+    border-radius: 4px;
+    background: #e8edf2;
+    color: #5a6673;
+    font-size: 9px;
+    font-weight: 600;
+}
+
+/* ---------- размышления модели ---------- */
+
+.bxadmins-reasoning {
+    padding: 6px 16px 8px;
+    border-top: 1px solid #eef1f4;
+}
+
+.bxadmins-reasoning-summary {
+    color: #8f98a3;
+    font-size: 11.5px;
+    cursor: pointer;
+}
+
+.bxadmins-reasoning-text {
+    max-height: 220px;
+    margin: 6px 0 0;
+    padding: 8px;
+    overflow: auto;
+    border: 1px solid #eef1f4;
+    border-radius: 4px;
+    background: #fff;
+    color: #5a6673;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 11.5px;
+    line-height: 1.5;
+    white-space: pre-wrap;
+    word-break: break-word;
+}
+
+/* ---------- уровень размышлений: кнопки ---------- */
+
+.bxadmins-reasoning-switch {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 6px;
+}
+
+.bxadmins-reasoning-switch .adm-btn {
+    margin: 0;
+}
+
+.bxadmins-hint-text {
+    margin-bottom: 6px;
+    color: #3c4650;
+    line-height: 1.55;
+}
+
+.bxadmins-batch-list {
+    margin: 8px 0 0 18px;
+    padding: 0;
+    color: #3c4650;
+}
+
+.bxadmins-batch-list li {
+    margin: 3px 0;
+    line-height: 1.45;
+}
+
+/* Итог подтверждения/отката: заметная плашка внизу чата. */
+.bxadmins-change-status {
+    margin: 0 0 14px;
+    padding: 10px 14px;
+    border-left: 4px solid #3fa45b;
+    border-radius: 5px;
+    background: #eef8f0;
+    color: #2b5e3a;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.bxadmins-change-status-error {
+    border-left-color: #d34b4b;
+    background: #fdeeee;
+    color: #7a2b2b;
+}

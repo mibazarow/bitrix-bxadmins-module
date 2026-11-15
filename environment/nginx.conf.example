@@ -1,0 +1,7 @@
+# Добавить в server { ... } сайта.
+# .htaccess в environment работает только на Apache; nginx его не читает.
+
+location ^~ /local/modules/mibazarow.bxadmins/environment/ {
+    deny all;
+    return 404;
+}

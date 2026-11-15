@@ -1,0 +1,31 @@
+# Системное
+.DS_Store
+Thumbs.db
+
+# Данные и артефакты работы агента
+bxadmins-data/
+*.log
+*.sql
+*.dump
+.env
+environment.env
+config.local.env
+
+# Зависимости и окружение
+node_modules/
+venv/
+__pycache__/
+*.pyc
+environment/models/**
+!environment/models/.gitkeep
+environment/payload/
+
+# Оригинальные скриншоты (используются копии с осмысленными именами)
+SCREENS/Снимок экрана*.png
+
+# IDE
+.idea/
+.vscode/
+*.swp
+daemon/.daemon.lock
+.daemon.lock

@@ -1,0 +1,30 @@
+import { CONFIG } from "../utils/config.js";
+const TIMEOUT_MS = 60000;
+async function postEmbed(text, profile) {
+    try {
+        const response = await fetch(`${CONFIG.embeddingsUrl}/embed`, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ text, profile, dim: CONFIG.embeddingDim }),
+            signal: AbortSignal.timeout(TIMEOUT_MS),
+        });
+        if (!response.ok)
+            return null;
+        const data = await response.json();
+        return new Float32Array(data.embedding);
+    }
+    catch {
+        return null;
+    }
+}
+export async function getEmbedding(text, profile = "docs_passage") {
+    return postEmbed(text, profile);
+}
+export async function getEmbeddings(texts, profile = "docs_passage") {
+    const result = [];
+    for (const text of texts) {
+        result.push(await postEmbed(text, profile));
+    }
+    return result;
+}
+//# sourceMappingURL=embeddings.js.map

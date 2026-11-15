@@ -1,0 +1,16 @@
+[Unit]
+Description=BXADMIN-S Scrapling MCP
+After=network.target
+
+[Service]
+Type=simple
+User=@WEB_USER@
+Group=@WEB_USER@
+WorkingDirectory=@SCRAPLING_DIR@
+EnvironmentFile=@CONFIG_FILE@
+ExecStart=@SCRAPLING_BIN@ --http --host 127.0.0.1 --port @SCRAPLING_PORT@
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

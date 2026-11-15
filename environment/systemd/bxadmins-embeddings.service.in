@@ -1,0 +1,19 @@
+[Unit]
+Description=BXADMIN-S EmbeddingGemma 2
+After=network.target
+
+[Service]
+Type=simple
+User=@WEB_USER@
+Group=@WEB_USER@
+WorkingDirectory=@EMBEDDINGS_DIR@
+EnvironmentFile=@CONFIG_FILE@
+Environment=TRANSFORMERS_OFFLINE=@EMBEDDINGS_OFFLINE@
+Environment=EMBEDDING_TEXT_ONLY=1
+Environment=TOKENIZERS_PARALLELISM=false
+ExecStart=@EMBEDDINGS_PYTHON@ -m uvicorn embeddings-service:app --host 127.0.0.1 --port @EMBEDDING_PORT@
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
