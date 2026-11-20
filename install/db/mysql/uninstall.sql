@@ -1,0 +1,14 @@
+DROP TABLE IF EXISTS b_mibazarow_bxadmins_schedule;
+DROP TABLE IF EXISTS b_mibazarow_bxadmins_mcp_server;
+DROP TABLE IF EXISTS b_mibazarow_bxadmins_llm_profile;
+DROP TABLE IF EXISTS b_mibazarow_bxadmins_task;
+DROP TABLE IF EXISTS b_mibazarow_bxadmins_task_event;
+DROP TABLE IF EXISTS b_mibazarow_bxadmins_change;
+DROP TABLE IF EXISTS b_mibazarow_bxadmins_message;
+DROP TABLE IF EXISTS b_mibazarow_bxadmins_chat;
+DROP TABLE IF EXISTS b_mibazarow_bxadmins_index;
+DROP TABLE IF EXISTS b_mibazarow_bxadmins_skill_version;
+DROP TABLE IF EXISTS b_mibazarow_bxadmins_skill;
+DROP TABLE IF EXISTS b_mibazarow_bxadmins_memory;
+DROP TABLE IF EXISTS b_mibazarow_bxadmins_todo;
+DROP TABLE IF EXISTS b_mibazarow_bxadmins_custom_module;

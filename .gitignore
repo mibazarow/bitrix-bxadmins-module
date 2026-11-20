@@ -5,7 +5,10 @@ Thumbs.db
 # Данные и артефакты работы агента
 bxadmins-data/
 *.log
+# Дампы базы игнорируем, но SQL установщика модуля — часть поставки.
 *.sql
+!install/db/mysql/install.sql
+!install/db/mysql/uninstall.sql
 *.dump
 .env
 environment.env
